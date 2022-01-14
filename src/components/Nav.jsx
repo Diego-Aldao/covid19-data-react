@@ -35,7 +35,7 @@ const options = [
 ];
 function Nav() {
   return (
-    <nav className="p-4 bg-white sm:flex">
+    <nav className="p-4 bg-white sm:flex ">
       <div className="flex justify-between sm:w-1/2 sm:justify-start">
         <div className="flex sm:mr-12">
           <FontAwesomeIcon
