@@ -10,7 +10,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 function Info() {
   return (
-    <div className="grid md:grid-cols-2 md:justify-between gap-x-5">
+    <div className="grid md:grid-cols-2 md:justify-between gap-x-5 lg:flex lg:flex-wrap lg:w-1/2">
       <div className="md:col-span-2 flex px-3 py-8 my-10 items-center w-full">
         <img
           className="w-20 rounded-sm"

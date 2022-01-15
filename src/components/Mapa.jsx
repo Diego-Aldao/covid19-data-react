@@ -29,13 +29,13 @@ function Mapa() {
     },
   };
   return (
-    <div className="map bg-white mt-5 border-gray-200 rounded-sm border-2">
+    <div className="map bg-white mt-10 border-gray-200 rounded-sm border-2 lg:w-2/3 max-h-screen">
       <div className="header-mapa px-3 py-5 capitalize text-xl border-b-gray-200 border-b-2 ">
         sudamerica
       </div>
       <div className="contenedor-mapa p-5">
         <VectorMap
-          map={southAmericaMill}
+          map={worldMill}
           style={{
             height: "630px",
           }}
