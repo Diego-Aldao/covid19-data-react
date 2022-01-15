@@ -4,7 +4,14 @@ import { worldMill } from "@react-jvectormap/world";
 import { europeMill } from "@react-jvectormap/europe";
 import { africaMill } from "@react-jvectormap/africa";
 import { northAmericaMill } from "@react-jvectormap/northamerica";
-function Mapa() {
+function Mapa({ setData }) {
+  const fetchAlClickear = async (code) => {
+    const url = `https://disease.sh/v3/covid-19/countries/${code}?strict=true`;
+    const respuesta = await fetch(url);
+    const resultado = await respuesta.json();
+    setData(resultado);
+  };
+
   const regionStyle = {
     transition: "all 1s ease",
     initial: {
@@ -38,7 +45,7 @@ function Mapa() {
       </div>
       <div className="contenedor-mapa p-5">
         <VectorMap
-          map={northAmericaMill}
+          map={southAmericaMill}
           style={{
             height: "630px",
           }}
@@ -48,7 +55,7 @@ function Mapa() {
           regionStyle={regionStyle}
           zoomOnScroll={false}
           onRegionClick={(elements, code, region) => {
-            console.log(code);
+            fetchAlClickear(code);
           }}
         />
       </div>
