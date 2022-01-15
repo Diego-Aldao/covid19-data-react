@@ -2,11 +2,6 @@ import { VectorMap } from "@react-jvectormap/core";
 import { southAmericaMill } from "@react-jvectormap/southamerica";
 import { worldMill } from "@react-jvectormap/world";
 function Mapa() {
-  const containerStyle = {
-    width: "100%",
-    height: "420px",
-  };
-
   const regionStyle = {
     transition: "all 1s ease",
     initial: {
@@ -16,6 +11,7 @@ function Mapa() {
       "stroke-opacity": 0.3,
       cursor: "pointer",
       selectedRegions: "AR",
+      overflow: "visible",
     },
     hover: {
       fill: "#6366f1",
@@ -37,16 +33,17 @@ function Mapa() {
       <div className="header-mapa px-3 py-5 capitalize text-xl border-b-gray-200 border-b-2 ">
         sudamerica
       </div>
-      <div className="contenedor-mapa">
+      <div className="contenedor-mapa p-5">
         <VectorMap
           map={southAmericaMill}
-          containerStyle={containerStyle}
-          style={{ height: "430px" }}
+          style={{
+            height: "630px",
+          }}
           backgroundColor={"#fff"}
           regionsSelectable={true}
           regionsSelectableOne={true}
           regionStyle={regionStyle}
-          panOnDrag={true}
+          zoomOnScroll={false}
           onRegionClick={(elements, code, region) => {
             console.log(code);
           }}

@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="bg-indigo-50">
       <Nav />
-      <div className="contenedor px-5 transition-all duration-300">
+      <div className="px-5">
         <Mapa />
         <Info />
       </div>
