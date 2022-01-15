@@ -4,7 +4,9 @@ import Mapa from "./components/Mapa";
 import Nav from "./components/Nav";
 
 function App() {
+  //State con los datos del fetch a la api
   const [data, setData] = useState({});
+
   return (
     <div className="bg-indigo-50">
       <Nav />

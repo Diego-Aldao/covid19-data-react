@@ -4,16 +4,18 @@ import { worldMill } from "@react-jvectormap/world";
 import { europeMill } from "@react-jvectormap/europe";
 import { africaMill } from "@react-jvectormap/africa";
 import { northAmericaMill } from "@react-jvectormap/northamerica";
+
 function Mapa({ setData }) {
+  //Traer la data del pais clickeado
   const fetchAlClickear = async (code) => {
     const url = `https://disease.sh/v3/covid-19/countries/${code}?strict=true`;
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
+    //Enviar la data al state de app
     setData(resultado);
   };
 
   const regionStyle = {
-    transition: "all 1s ease",
     initial: {
       fill: "#e4e4e4",
       stroke: "#fff",
@@ -38,6 +40,7 @@ function Mapa({ setData }) {
       "fill-opacity": 0.8,
     },
   };
+
   return (
     <div className="map bg-white mt-10 border-gray-200 rounded-sm border-2 lg:w-2/3 max-h-screen">
       <div className="header-mapa px-3 py-5 capitalize text-xl border-b-gray-200 border-b-2 ">
