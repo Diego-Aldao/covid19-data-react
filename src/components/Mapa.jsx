@@ -39,9 +39,9 @@ function Mapa() {
       </div>
       <div className="contenedor-mapa">
         <VectorMap
-          map={worldMill}
+          map={southAmericaMill}
           containerStyle={containerStyle}
-          style={{ height: "430px", transition: "background 0.3s ease" }}
+          style={{ height: "430px" }}
           backgroundColor={"#fff"}
           regionsSelectable={true}
           regionsSelectableOne={true}
