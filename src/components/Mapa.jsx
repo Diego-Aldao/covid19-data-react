@@ -1,6 +1,9 @@
 import { VectorMap } from "@react-jvectormap/core";
 import { southAmericaMill } from "@react-jvectormap/southamerica";
 import { worldMill } from "@react-jvectormap/world";
+import { europeMill } from "@react-jvectormap/europe";
+import { africaMill } from "@react-jvectormap/africa";
+import { northAmericaMill } from "@react-jvectormap/northamerica";
 function Mapa() {
   const regionStyle = {
     transition: "all 1s ease",
@@ -35,7 +38,7 @@ function Mapa() {
       </div>
       <div className="contenedor-mapa p-5">
         <VectorMap
-          map={worldMill}
+          map={northAmericaMill}
           style={{
             height: "630px",
           }}
