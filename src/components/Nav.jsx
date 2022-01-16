@@ -1,5 +1,6 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
 import Select from "react-select";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVirus,
   faMoon,
@@ -25,15 +26,19 @@ const styles = {
   }),
 };
 const options = [
-  { value: "sudamerica", label: "Sudamerica" },
-  { value: "norteamerica", label: "Norteamerica" },
-  { value: "europa", label: "Europa" },
-  { value: "asia", label: "Asia" },
-  { value: "oceania", label: "Oceania" },
-  { value: "africa", label: "Africa" },
-  { value: "mundial", label: "Mundial" },
+  { value: "southAmericaMill", label: "Sudamerica" },
+  { value: "northAmericaMill", label: "Norteamerica" },
+  { value: "europeMill", label: "Europa" },
+  { value: "asiaMill", label: "Asia" },
+  { value: "oceaniaMill", label: "Oceania" },
+  { value: "africaMill", label: "Africa" },
+  { value: "worldMill", label: "Mundial" },
 ];
-function Nav() {
+function Nav({ setValor }) {
+  const handleChange = (e) => {
+    setValor(e.value);
+  };
+
   return (
     <nav className="py-4 bg-white">
       <div className="max-w-screen-2xl sm:flex mx-auto px-5">
@@ -54,6 +59,7 @@ function Nav() {
             styles={styles}
             placeholder={<div>Seleccionar Continente</div>}
             options={options}
+            onChange={handleChange}
             className="mt-8 sm:mt-0 max-w-md mx-auto sm:ml-auto sm:mr-0"
           />
         </div>

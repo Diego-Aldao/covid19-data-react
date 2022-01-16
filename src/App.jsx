@@ -6,6 +6,7 @@ import Nav from "./components/Nav";
 function App() {
   //State con los datos del fetch a la api
   const [data, setData] = useState({});
+  const [valor, setValor] = useState("");
 
   //PRIMER FETCH AL CARGAR LA PAGINA
   useEffect(() => {
@@ -20,9 +21,9 @@ function App() {
 
   return (
     <div className="bg-indigo-50 min-h-screen">
-      <Nav />
+      <Nav setValor={setValor} />
       <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
-        <Mapa setData={setData} />
+        <Mapa setData={setData} valor={valor} />
         <Info data={data} />
       </div>
     </div>
