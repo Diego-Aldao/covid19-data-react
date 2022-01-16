@@ -19,9 +19,9 @@ function App() {
   }, []);
 
   return (
-    <div className="bg-indigo-50">
+    <div className="bg-indigo-50 min-h-screen">
       <Nav />
-      <div className="px-5 lg:flex lg:gap-8">
+      <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
         <Mapa setData={setData} />
         <Info data={data} />
       </div>
