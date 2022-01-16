@@ -9,7 +9,7 @@ function Dato({ icono, nombre, info, color }) {
       </div>
       <div>
         <p className="uppercase text-xs mb-1">{nombre}</p>
-        <p className="text-2xl">{info ? info.toLocaleString("es-AR") : ""}</p>
+        <p className="text-2xl">{info ? info.toLocaleString("es-AR") : "0"}</p>
       </div>
     </div>
   );
