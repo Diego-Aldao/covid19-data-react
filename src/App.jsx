@@ -8,11 +8,14 @@ function App() {
   const [data, setData] = useState({});
 
   //PRIMER FETCH AL CARGAR LA PAGINA
-  useEffect(async () => {
-    const url = `https://disease.sh/v3/covid-19/countries/ar?strict=true`;
-    const respuesta = await fetch(url);
-    const resultado = await respuesta.json();
-    setData(resultado);
+  useEffect(() => {
+    const primerFetch = async () => {
+      const url = `https://disease.sh/v3/covid-19/countries/ar?strict=true`;
+      const respuesta = await fetch(url);
+      const resultado = await respuesta.json();
+      setData(resultado);
+    };
+    primerFetch();
   }, []);
 
   return (
