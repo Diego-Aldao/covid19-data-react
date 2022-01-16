@@ -1,3 +1,5 @@
+import { buscarFecha } from "../helpers";
+import Dato from "./Dato";
 import {
   faUsers,
   faFirstAid,
@@ -7,7 +9,6 @@ import {
   faLungsVirus,
   faCalendarAlt,
 } from "@fortawesome/free-solid-svg-icons";
-import Dato from "./Dato";
 
 function Info({ data }) {
   //Destructuring para obtener los datos que necesito
@@ -74,7 +75,7 @@ function Info({ data }) {
       <Dato
         icono={faCalendarAlt}
         nombre={"último update"}
-        info={updated}
+        info={buscarFecha(updated)}
         color={"bg-gradient-to-r from-amber-400 to-yellow-700"}
       />
     </div>
