@@ -57,6 +57,7 @@ function Mapa({ setData }) {
           regionsSelectableOne={true}
           regionStyle={regionStyle}
           zoomOnScroll={false}
+          selectedRegions={"AR"}
           onRegionClick={(elements, code, region) => {
             fetchAlClickear(code);
           }}
