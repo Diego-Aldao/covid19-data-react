@@ -26,13 +26,13 @@ const styles = {
   }),
 };
 const options = [
-  { value: "southAmericaMill", label: "Sudamerica" },
-  { value: "northAmericaMill", label: "Norteamerica" },
-  { value: "europeMill", label: "Europa" },
-  { value: "asiaMill", label: "Asia" },
-  { value: "oceaniaMill", label: "Oceania" },
-  { value: "africaMill", label: "Africa" },
-  { value: "worldMill", label: "Mundial" },
+  { value: "sudamerica", label: "Sudamerica" },
+  { value: "norteamerica", label: "Norteamerica" },
+  { value: "europa", label: "Europa" },
+  { value: "asia", label: "Asia" },
+  { value: "oceania", label: "Oceania" },
+  { value: "africa", label: "Africa" },
+  { value: "mundo", label: "Mundial" },
 ];
 function Nav({ setValor }) {
   const handleChange = (e) => {

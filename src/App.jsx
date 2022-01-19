@@ -23,7 +23,7 @@ function App() {
     <div className="bg-indigo-50 min-h-screen">
       <Nav setValor={setValor} />
       <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
-        <Mapa setData={setData} valor={valor} />
+        <Mapa setData={setData} valor={valor} setValor={setValor} />
         <Info data={data} />
       </div>
     </div>
