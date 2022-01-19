@@ -1,10 +1,5 @@
-import { useState } from "react";
 import { VectorMap } from "@react-jvectormap/core";
 import { southAmericaMill } from "@react-jvectormap/southamerica";
-import { worldMill } from "@react-jvectormap/world";
-import { europeMill } from "@react-jvectormap/europe";
-import { africaMill } from "@react-jvectormap/africa";
-import { northAmericaMill } from "@react-jvectormap/northamerica";
 import Sudamerica from "./mapas/Sudamerica";
 import Asia from "./mapas/Asia";
 import Africa from "./mapas/Africa";
@@ -14,8 +9,6 @@ import Mundo from "./mapas/Mundo";
 import Oceania from "./mapas/Oceania";
 
 function Mapa({ setData, valor }) {
-  console.log(valor);
-
   //Traer la data del pais clickeado
   const fetchAlClickear = async (code) => {
     const url = `https://disease.sh/v3/covid-19/countries/${code}?strict=true`;

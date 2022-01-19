@@ -12,7 +12,6 @@ function Sudamerica({ regionStyle, fetchAlClickear }) {
       regionsSelectableOne={true}
       regionStyle={regionStyle}
       zoomOnScroll={false}
-      selectedRegions={"AR"}
       //elements y region necesitan ser pasados como parametros
       onRegionClick={(elements, code, region) => {
         fetchAlClickear(code);

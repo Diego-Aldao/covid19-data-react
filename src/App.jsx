@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import Info from "./components/Info";
 import Mapa from "./components/Mapa";
 import Nav from "./components/Nav";
+import useTheme from "./hooks/useTheme";
 
 function App() {
   //State con los datos del fetch a la api
@@ -19,8 +20,9 @@ function App() {
     primerFetch();
   }, []);
 
+  console.log(theme);
   return (
-    <div className="bg-indigo-50 min-h-screen">
+    <div className={` bg-indigo-50 min-h-screen`}>
       <Nav setValor={setValor} />
       <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
         <Mapa setData={setData} valor={valor} setValor={setValor} />
