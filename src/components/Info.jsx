@@ -25,7 +25,7 @@ function Info({ data }) {
 
   return (
     <div className="grid md:grid-cols-2 md:justify-between gap-x-5 lg:flex lg:flex-wrap lg:w-1/2">
-      <div className="md:col-span-2 flex px-3 py-8 my-10 items-center w-full">
+      <div className="md:col-span-2 flex px-3 py-8 my-10 items-center w-full dark:text-white">
         <img
           className="w-20 h-12 rounded-sm"
           /*Si hago destructuring para obtener la bandera sin que antes este el fetch,
