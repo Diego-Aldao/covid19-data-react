@@ -7,7 +7,7 @@ function Oceania({ regionStyle, fetchAlClickear }) {
       style={{
         height: "630px",
       }}
-      backgroundColor={"#fff"}
+      backgroundColor={"white dark:bg-tema-oscuro"}
       regionsSelectable={true}
       regionsSelectableOne={true}
       regionStyle={regionStyle}

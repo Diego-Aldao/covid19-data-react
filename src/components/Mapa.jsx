@@ -18,12 +18,13 @@ function Mapa({ setData, valor }) {
     setData(resultado);
   };
   //Estilo de los paises
+
   const regionStyle = {
     initial: {
       fill: "#e4e4e4",
-      stroke: "#fff",
-      "stroke-width": 1,
-      "stroke-opacity": 0.3,
+      stroke: "transparent",
+      "stroke-width": 2,
+      "stroke-opacity": 1,
       cursor: "pointer",
       selectedRegions: "AR",
       overflow: "visible",
@@ -43,10 +44,12 @@ function Mapa({ setData, valor }) {
       "fill-opacity": 0.8,
     },
   };
-
+  const containerStyle = {
+    backgroundColor: "red",
+  };
   return (
-    <div className="map bg-white mt-10 border-gray-200 rounded-sm border-2 lg:w-2/3 ">
-      <div className="header-mapa px-3 py-5 capitalize text-xl border-b-gray-200 border-b-2 ">
+    <div className="map bg-white dark:bg-tema-oscuro-secundario dark:text-white mt-10 rounded-sm lg:w-2/3 ">
+      <div className="header-mapa px-3 py-5 capitalize text-xl border-b-2 dark:border-tema-oscuro ">
         {valor ? valor : "sudamerica"}
       </div>
       <div className="contenedor-mapa p-5 max-h-screen">
@@ -55,6 +58,7 @@ function Mapa({ setData, valor }) {
            y cambiar el componente segun el state*/}
         {valor == "sudamerica" ? (
           <Sudamerica
+            className={"contenedor-mapa"}
             regionStyle={regionStyle}
             fetchAlClickear={fetchAlClickear}
           />
@@ -82,7 +86,7 @@ function Mapa({ setData, valor }) {
             style={{
               height: "630px",
             }}
-            backgroundColor={"#fff"}
+            backgroundColor={"white dark:bg-tema-oscuro"}
             regionsSelectable={true}
             regionsSelectableOne={true}
             regionStyle={regionStyle}
