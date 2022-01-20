@@ -5,6 +5,9 @@ import Nav from "./components/Nav";
 import useTheme from "./hooks/useTheme";
 
 function App() {
+  //custom hook
+  const { theme, toggleTheme } = useTheme();
+
   //State con los datos del fetch a la api
   const [data, setData] = useState({});
   const [valor, setValor] = useState("");
@@ -22,11 +25,13 @@ function App() {
 
   console.log(theme);
   return (
-    <div className={` bg-indigo-50 min-h-screen`}>
-      <Nav setValor={setValor} />
-      <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
-        <Mapa setData={setData} valor={valor} setValor={setValor} />
-        <Info data={data} />
+    <div className={theme}>
+      <div className="bg-indigo-50 dark:bg-[#292d3e] min-h-screen">
+        <Nav setValor={setValor} toggleTheme={toggleTheme} theme={theme} />
+        <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
+          <Mapa setData={setData} valor={valor} setValor={setValor} />
+          <Info data={data} />
+        </div>
       </div>
     </div>
   );

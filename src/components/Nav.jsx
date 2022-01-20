@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faVirus,
   faMoon,
+  faSun,
   faGlobeAmericas,
   faTachometerAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -12,12 +13,20 @@ const styles = {
   option: (base, state) => ({
     ...base,
     backgroundColor: state.isSelected ? "#6366f1" : "white",
+    color: state.isSelected ? "white" : "black",
     "&:hover": {
       backgroundColor: "#e0e7ff",
     },
   }),
+
+  singleValue: (base) => ({
+    ...base,
+    color: "dark:text-white",
+  }),
+
   control: (base) => ({
     ...base,
+    backgroundColor: "dark:bg-tema-oscuro",
     boxShadow: "none",
     "&:hover": {
       border: "1px solid #6366f1",
@@ -25,6 +34,7 @@ const styles = {
     },
   }),
 };
+
 const options = [
   { value: "sudamerica", label: "Sudamerica" },
   { value: "norteamerica", label: "Norteamerica" },
@@ -34,13 +44,14 @@ const options = [
   { value: "africa", label: "Africa" },
   { value: "mundo", label: "Mundial" },
 ];
-function Nav({ setValor }) {
+
+function Nav({ setValor, toggleTheme, theme }) {
   const handleChange = (e) => {
     setValor(e.value);
   };
 
   return (
-    <nav className="py-4 bg-white">
+    <nav className="py-4 bg-white dark:bg-tema-oscuro-secundario dark:text-white">
       <div className="max-w-screen-2xl sm:flex mx-auto px-5">
         <div className="flex justify-between sm:w-1/2 sm:justify-start">
           <div className="flex sm:mr-12">
@@ -50,8 +61,11 @@ function Nav({ setValor }) {
             />
             <p className="capitalize text-3xl font-medium">cov-data</p>
           </div>
-          <span className="flex justify-center items-center">
-            <FontAwesomeIcon icon={faMoon} />
+          <span
+            onClick={toggleTheme}
+            className="flex justify-center items-center text-xl"
+          >
+            <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
           </span>
         </div>
         <div className="sm:w-1/2">
