@@ -50,11 +50,11 @@ function Mapa({ setData, valor, setCargando }) {
   };
 
   return (
-    <div className="map bg-white dark:bg-tema-oscuro-secundario dark:text-white mt-10 rounded-sm lg:w-2/3 ">
+    <div className="map max-h-[750px] bg-white dark:bg-tema-oscuro-secundario dark:text-white mt-10 rounded-sm lg:w-2/3 ">
       <div className="header-mapa px-3 py-5 capitalize text-xl border-b-2 dark:border-tema-oscuro ">
         {valor ? valor : "sudamerica"}
       </div>
-      <div className="contenedor-mapa p-5 max-h-screen">
+      <div className="contenedor-mapa p-5">
         {/* como jvectormap no deja re-renderizar el mapa al pasarle nuevas props,
            la unica solucion es crear un componente para cada mapa con el prop map fijo
            y cambiar el componente segun el state*/}
