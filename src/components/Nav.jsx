@@ -6,7 +6,6 @@ import {
   faMoon,
   faSun,
   faGlobeAmericas,
-  faTachometerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 const styles = {
@@ -71,7 +70,12 @@ function Nav({ setValor, toggleTheme, theme }) {
         <div className="sm:w-1/2">
           <Select
             styles={styles}
-            placeholder={<div>Seleccionar Continente</div>}
+            placeholder={
+              <div>
+                <FontAwesomeIcon icon={faGlobeAmericas} />
+                <span className="ml-3"> Seleccionar Continente</span>
+              </div>
+            }
             options={options}
             onChange={handleChange}
             className="mt-8 sm:mt-0 max-w-md mx-auto sm:ml-auto sm:mr-0"
