@@ -8,14 +8,18 @@ import Europa from "./mapas/Europa";
 import Mundo from "./mapas/Mundo";
 import Oceania from "./mapas/Oceania";
 
-function Mapa({ setData, valor }) {
+function Mapa({ setData, valor, setCargando }) {
   //Traer la data del pais clickeado
   const fetchAlClickear = async (code) => {
+    setCargando(true);
     const url = `https://disease.sh/v3/covid-19/countries/${code}?strict=true`;
     const respuesta = await fetch(url);
     const resultado = await respuesta.json();
     //Enviar la data al state de app
     setData(resultado);
+    setTimeout(() => {
+      setCargando(false);
+    }, 500);
   };
   //Estilo de los paises
 

@@ -17,7 +17,7 @@ export default () => {
     if (localTheme) {
       setTheme(localTheme);
     }
-  }, {});
+  }, []);
 
   return {
     theme,

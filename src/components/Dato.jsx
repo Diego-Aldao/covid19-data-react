@@ -1,5 +1,6 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-function Dato({ icono, nombre, info, color }) {
+import LoaderInfo from "./LoaderInfo";
+function Dato({ icono, nombre, info, color, cargando }) {
   return (
     <div className="bg-white dark:bg-tema-oscuro-secundario dark:text-white flex mb-10 p-5 w-full max-w-xl">
       <div
@@ -9,7 +10,15 @@ function Dato({ icono, nombre, info, color }) {
       </div>
       <div>
         <p className="uppercase text-xs mb-1">{nombre}</p>
-        <p className="text-2xl">{info ? info.toLocaleString("es-AR") : "0"}</p>
+        {cargando ? (
+          <LoaderInfo />
+        ) : (
+          <>
+            <p className="text-2xl">
+              {info ? info.toLocaleString("es-AR") : "0"}
+            </p>
+          </>
+        )}
       </div>
     </div>
   );

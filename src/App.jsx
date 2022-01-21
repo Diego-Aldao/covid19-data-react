@@ -12,6 +12,8 @@ function App() {
   const [data, setData] = useState({});
   const [valor, setValor] = useState("");
 
+  const [cargando, setCargando] = useState(true);
+
   //PRIMER FETCH AL CARGAR LA PAGINA
   useEffect(() => {
     const primerFetch = async () => {
@@ -19,18 +21,23 @@ function App() {
       const respuesta = await fetch(url);
       const resultado = await respuesta.json();
       setData(resultado);
+      setCargando(!cargando);
     };
     primerFetch();
   }, []);
 
-  console.log(theme);
   return (
-    <div className={theme}>
-      <div className="bg-indigo-50 dark:bg-[#292d3e] min-h-screen">
+    <div className={`${theme}`}>
+      <div className="bg-indigo-50 dark:bg-tema-oscuro min-h-screen">
         <Nav setValor={setValor} toggleTheme={toggleTheme} theme={theme} />
         <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
-          <Mapa setData={setData} valor={valor} setValor={setValor} />
-          <Info data={data} />
+          <Mapa
+            setData={setData}
+            valor={valor}
+            setValor={setValor}
+            setCargando={setCargando}
+          />
+          <Info data={data} cargando={cargando} />
         </div>
       </div>
     </div>
