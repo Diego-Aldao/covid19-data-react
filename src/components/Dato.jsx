@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import LoaderInfo from "./LoaderInfo";
 function Dato({ icono, nombre, info, color, cargando }) {
   return (
-    <div className="bg-white dark:bg-tema-oscuro-secundario dark:text-white flex mb-10 p-5 w-full max-w-xl">
+    <div className="bg-white dark:bg-tema-oscuro-secundario dark:text-white flex mb-10 p-5 w-full ">
       <div
         className={`icono w-12 h-12 mr-3 flex items-center justify-center rounded-full ${color}`}
       >

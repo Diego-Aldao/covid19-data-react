@@ -36,11 +36,11 @@ const styles = {
 };
 
 const options = [
-  { value: "sudamerica", label: "Sudamerica" },
-  { value: "norteamerica", label: "Norteamerica" },
+  { value: "sudamerica", label: "Sudamérica" },
+  { value: "norteamerica", label: "Norteamérica" },
   { value: "europa", label: "Europa" },
   { value: "asia", label: "Asia" },
-  { value: "oceania", label: "Oceania" },
+  { value: "oceania", label: "Oceanía" },
   { value: "africa", label: "Africa" },
   { value: "mundo", label: "Mundial" },
 ];

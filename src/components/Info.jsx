@@ -25,7 +25,7 @@ function Info({ data, cargando }) {
   } = data;
 
   return (
-    <div className="transition-transform grid md:grid-cols-2 md:justify-between gap-x-5 lg:flex lg:flex-wrap lg:w-1/2">
+    <div className="transition-transform grid md:grid-cols-2 md:justify-between gap-x-5 lg:flex lg:flex-wrap lg:w-1/2 overflow-hidden">
       <div className="md:col-span-2 flex px-3 py-8 my-10 items-center w-full dark:text-white">
         {cargando ? (
           <LoaderPais />
@@ -37,7 +37,7 @@ function Info({ data, cargando }) {
         tira error
           */
               src={data.countryInfo ? data.countryInfo.flag : ""}
-              alt="bandera del pais"
+              alt="bandera del país"
             />
             <p className="uppercase text-xl ml-4">{country ? country : ""}</p>
           </>
@@ -45,21 +45,21 @@ function Info({ data, cargando }) {
       </div>
       <Dato
         icono={faUsers}
-        nombre={"poblacion"}
+        nombre={"población"}
         info={population}
         color={"bg-gradient-to-r from-purple-500 to-pink-500"}
         cargando={cargando}
       />
       <Dato
         icono={faFirstAid}
-        nombre={"casos confirmados"}
+        nombre={"total confirmados"}
         info={cases}
         color={"bg-gradient-to-r from-cyan-500 to-blue-500"}
         cargando={cargando}
       />
       <Dato
         icono={faHeadSideCough}
-        nombre={"casos activos"}
+        nombre={"total activos"}
         info={active}
         color={"bg-gradient-to-r from-violet-500 to-fuchsia-500"}
         cargando={cargando}

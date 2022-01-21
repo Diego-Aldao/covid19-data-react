@@ -9,7 +9,7 @@ const LoaderPais = (props) => (
     {...props}
   >
     <rect x="0" y="0" rx="2" ry="2" width="80" height="48" />
-    <rect x="100" y="12" rx="5" ry="5" width="180" height="25" />
+    <rect x="100" y="12" rx="5" ry="5" width="130" height="25" />
   </ContentLoader>
 );
 

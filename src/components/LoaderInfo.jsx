@@ -8,7 +8,7 @@ const LoaderInfo = (props) => (
     foregroundColor="#a9aaff50"
     {...props}
   >
-    <rect x="0" y="5" rx="5" ry="5" width="150" height="25" />
+    <rect x="0" y="5" rx="5" ry="5" width="120" height="25" />
   </ContentLoader>
 );
 

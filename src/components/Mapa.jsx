@@ -48,9 +48,7 @@ function Mapa({ setData, valor, setCargando }) {
       "fill-opacity": 0.8,
     },
   };
-  const containerStyle = {
-    backgroundColor: "red",
-  };
+
   return (
     <div className="map bg-white dark:bg-tema-oscuro-secundario dark:text-white mt-10 rounded-sm lg:w-2/3 ">
       <div className="header-mapa px-3 py-5 capitalize text-xl border-b-2 dark:border-tema-oscuro ">
