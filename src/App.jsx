@@ -2,11 +2,11 @@ import { useState, useEffect } from "react";
 import Info from "./components/Info";
 import Mapa from "./components/Mapa";
 import Nav from "./components/Nav";
-import useTheme from "./hooks/useTheme";
+import useTema from "./hooks/useTema";
 
 function App() {
   //custom hook
-  const { theme, toggleTheme } = useTheme();
+  const { tema, toggleTema } = useTema();
 
   //State con los datos del fetch a la api
   const [data, setData] = useState({});
@@ -27,9 +27,9 @@ function App() {
   }, []);
 
   return (
-    <div className={`${theme}`}>
+    <div className={`${tema}`}>
       <div className="bg-indigo-50 dark:bg-tema-oscuro min-h-screen">
-        <Nav setValor={setValor} toggleTheme={toggleTheme} theme={theme} />
+        <Nav setValor={setValor} toggleTema={toggleTema} tema={tema} />
         <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
           <Mapa
             setData={setData}

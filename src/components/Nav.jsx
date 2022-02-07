@@ -44,7 +44,7 @@ const options = [
   { value: "mundo", label: "Mundial" },
 ];
 
-function Nav({ setValor, toggleTheme, theme }) {
+function Nav({ setValor, toggleTema, tema }) {
   const handleChange = (e) => {
     setValor(e.value);
   };
@@ -61,10 +61,10 @@ function Nav({ setValor, toggleTheme, theme }) {
             <p className="capitalize text-3xl font-medium">cov-data</p>
           </div>
           <span
-            onClick={toggleTheme}
+            onClick={toggleTema}
             className="flex justify-center items-center text-xl"
           >
-            <FontAwesomeIcon icon={theme === "dark" ? faSun : faMoon} />
+            <FontAwesomeIcon icon={tema === "dark" ? faSun : faMoon} />
           </span>
         </div>
         <div className="sm:w-1/2">
