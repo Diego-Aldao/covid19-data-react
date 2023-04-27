@@ -1,7 +1,7 @@
 # covid19-data ![icono](/public/logo.png)
 
 Sitio con datos del coronavirus a nivel mundial.
-Utilizando jvectormap utilizo un mapa interactivo que al clickear sobre un pais me devuelve su codigo iso. Luego con ese codigo hago un fetch a una api de datos del covid, los cuales renderizo con junto al nombre del pais y su bandera.
+A traves de jvectormap utilizo un mapa interactivo que al clickear sobre un pais me devuelve su codigo iso. Luego con ese codigo hago un fetch a una api de datos del covid, los cuales renderizo junto al nombre del pais y su bandera.
 
 ## Tecnologías utilizadas
 
