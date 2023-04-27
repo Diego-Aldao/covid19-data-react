@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className={`${tema}`}>
-      <div className="bg-indigo-50 dark:bg-tema-oscuro min-h-screen">
+      <div className="bg-indigo-50 dark:bg-tema-oscuro min-h-screen pb-10">
         <Nav setValor={setValor} toggleTema={toggleTema} tema={tema} />
         <div className="px-5 lg:flex lg:gap-8 max-w-screen-2xl mx-auto">
           <Mapa

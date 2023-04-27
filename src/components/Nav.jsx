@@ -61,7 +61,7 @@ function Nav({ setValor, toggleTema, tema }) {
           </div>
           <span
             onClick={toggleTema}
-            className="flex justify-center items-center text-xl"
+            className="flex justify-center items-center text-xl cursor-pointer"
           >
             <FontAwesomeIcon icon={tema === "dark" ? faSun : faMoon} />
           </span>
